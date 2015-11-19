@@ -1,4 +1,6 @@
 <?php get_header(); ?>
+
+<?php /*
 <div id="content">
     <div id="inner-content">
         <main id="main" role="main" itemscope itemprop="mainContentOfPage" itemtype="http://schema.org/Blog">
@@ -15,7 +17,11 @@
                 </section>
                 <section class="search">
                     <p>
+                    */ ?>
+                    
                         <?php get_search_form(); ?>
+                    
+                    <?php /*
                     </p>
                 </section>
                 <footer class="article-footer">
@@ -27,4 +33,6 @@
         </main>
     </div>
 </div>
+*/ ?>
+
 <?php get_footer(); ?>

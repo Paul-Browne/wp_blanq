@@ -1,7 +1,11 @@
 <?php get_header(); ?>
+
+<?php /*
 <div id="content">
     <div id="inner-content">
         <main id="main" role="main" itemscope itemprop="mainContentOfPage" itemtype="http://schema.org/Blog">
+        */ ?>
+        
         <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
         <?php get_template_part( 'post-formats/format', get_post_format() ); ?>
         <?php endwhile; ?>
@@ -18,8 +22,12 @@
                 </footer>
             </article>
         <?php endif; ?>
+
+        <?php /*
         </main>
     <?php get_sidebar(); ?>
     </div>
 </div>
+*/ ?>
+
 <?php get_footer(); ?>

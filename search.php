@@ -1,11 +1,17 @@
 <?php get_header(); ?>
+
+<?php /*
 <div id="content">
 <div id="inner-content">
 <main id="main" role="main">
 <h1 class="archive-title"><span><?php _e( 'Search Results for:', 'bonestheme' ); ?></span> <?php echo esc_attr(get_search_query()); ?></h1>
+*/ ?>
+
 <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?> role="article">
-<header class="entry-header article-header">
+
+    <?php /*
+    <header class="entry-header article-header">
 <h3 class="search-title entry-title"><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h3>
 <p class="byline entry-meta vcard">
 <?php printf( __( 'Posted %1$s by %2$s', 'bonestheme' ),
@@ -14,15 +20,21 @@
 ); ?>
 </p>
 </header>
+*/ ?>
+
 <section class="entry-content">
 <?php the_excerpt( '<span class="read-more">' . __( 'Read more &raquo;', 'bonestheme' ) . '</span>' ); ?>
 </section>
+    
+    <?php /*
 <footer class="article-footer">
 <?php if(get_the_category_list(', ') != ''): ?>
 <?php printf( __( 'Filed under: %1$s', 'bonestheme' ), get_the_category_list(', ') ); ?>
 <?php endif; ?>
 <?php the_tags( '<p class="tags"><span class="tags-title">' . __( 'Tags:', 'bonestheme' ) . '</span> ', ', ', '</p>' ); ?>
 </footer>
+    */ ?>
+
 </article>
 <?php endwhile; ?>
 <?php bones_page_navi(); ?>
@@ -39,8 +51,12 @@
 </footer>
 </article>
 <?php endif; ?>
+
+<?php /*
 </main>
 <?php get_sidebar(); ?>
 </div>
 </div>
+*/ ?>
+
 <?php get_footer(); ?>

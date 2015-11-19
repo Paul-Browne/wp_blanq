@@ -34,6 +34,8 @@
     </head>
     <body <?php body_class(); ?> itemscope itemtype="http://schema.org/WebPage">
         <script>!function(){var a=document.getElementsByTagName("body")[0],b=document.createElement("div");a.appendChild(b),b.id="loader",b.className="loading";var c=document.getElementById("loader");window.onload=function(){c.className="loaded",setTimeout(function(){a.removeChild(c)},1e3)},window.onbeforeunload=function(){a.id="byebye"}}();</script>
+        
+        <?php /*
         <div id="container">
             <header class="header" role="banner" itemscope itemtype="http://schema.org/WPHeader">
                 <div id="inner-header">
@@ -59,3 +61,4 @@
                     </nav>
                 </div>
             </header>
+            */ ?>
